@@ -5,16 +5,21 @@ div.centreOmbre {
 	margin: auto;
 	padding: 30px;
 	margin-top: 70px;
+	font-size: 17px;
 }
 .centreOmbre h1 {
 	text-align: center;
 	margin-top: 0px;
 }
 
-#signup {
-	font-size: 17px;
+div.petitFormulaire {
 	width: 180px;
 }
+
+div.grandTableau {
+	margin: 70px;
+}
+
 
 #submit {
 	display: block;
