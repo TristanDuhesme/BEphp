@@ -1,14 +1,42 @@
-#signup {
+div.centreOmbre {
 	border: solid;
  	border-radius: 1em;
 	box-shadow: black 0.5em 0.5em 0.3em;
 	margin: auto;
 	padding: 30px;
-	margin-top: 100px;
-	width: 200px;
+	margin-top: 70px;
+}
+.centreOmbre h1 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+#signup {
+	font-size: 17px;
+	width: 180px;
 }
 
 #signup #submit {
 	margin: auto;
 	margin-top: 5px;
+}
+
+#listeCompte table {
+	margin: auto;
+	border-collapse: collapse;
+	width: 80%;
+}
+#listeCompte th, tr, td {
+	border: solid 1px grey;
+	margin: auto;
+}
+#listeCompte tr:nth-child(even) {
+	background-color: #DDD;
+}
+#listeCompte tr:nth-child(odd) {
+	background-color: #AAA;
+}
+
+#listeCompte tr.ligne:hover {
+	background-color: #FFF;
 }
