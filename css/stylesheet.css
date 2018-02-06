@@ -16,27 +16,37 @@ div.centreOmbre {
 	width: 180px;
 }
 
-#signup #submit {
+#submit {
+	display: block;
 	margin: auto;
 	margin-top: 5px;
 }
 
-#listeCompte table {
+.centreOmbre table {
 	margin: auto;
 	border-collapse: collapse;
 	width: 80%;
 }
-#listeCompte th, tr, td {
+.centreOmbre th, tr, td {
 	border: solid 1px grey;
 	margin: auto;
 }
-#listeCompte tr:nth-child(even) {
+.centreOmbre tr:nth-child(even) {
 	background-color: #DDD;
 }
-#listeCompte tr:nth-child(odd) {
+.centreOmbre tr:nth-child(odd) {
 	background-color: #AAA;
 }
 
-#listeCompte tr.ligne:hover {
+.centreOmbre tr.ligne:hover {
 	background-color: #FFF;
+}
+
+.quantiteLivre {
+	width: 100px;
+}
+table input {
+	border: 0px;
+	width: 100%;
+	height: 100%;
 }
