@@ -8,11 +8,10 @@ error_reporting(E_ALL);
 	isset( $_POST['addresse'] ) && !empty( $_POST['addresse'] ) &&
 	isset( $_POST['motdepasse'] ) && !empty( $_POST['motdepasse'] ))
     {
-	
         $nom = $_POST['nom'];
-	$prenom = $_POST['prenom'];
-	$addresse = $_POST['addresse'];
-	$motdepasse = $_POST['motdepasse'];
+        $prenom = $_POST['prenom'];
+	    $addresse = $_POST['addresse'];
+	    $motdepasse = $_POST['motdepasse'];
 	
     } else {
         exit();
