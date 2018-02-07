@@ -9,12 +9,14 @@
 <?php
 
 require('connectDB.php');
-
+session_start();
 //checking if data has been entered
 if (isset($_POST['idcmd']) && !empty($_POST['idcmd'])) {
     $idcmd = $_POST['idcmd'];
 
-} else {
+} else if (!empty($_SESSION['idcmd'])){
+    $idcmd = $_SESSION['idcmd'];
+} else{
     exit();
 }
 
@@ -22,7 +24,7 @@ if (isset($_POST['idcmd']) && !empty($_POST['idcmd'])) {
 try {
 
     $res = $dbh->query("
-                                        SELECT `commandes`.idcmd, `personnes`.nom, `personnes`.prenom,`personnes`.adresse, 
+                                        SELECT `commandes`.idcmd, `personnes`.nom, `personnes`.prenom,`personnes`.adresse, `commandes`.validee,
                                         sum(prix * qte) as montant, SUM(qte) as nb_livre FROM `commandes` 
                                         INNER JOIN `lignescmd` ON `commandes`.idcmd = `lignescmd`.`idcmd` 
                                         INNER JOIN `ouvrages` ON `ouvrages`.`idouvrage` = `lignescmd`.`idouvrage` 
@@ -75,6 +77,10 @@ try {
                 <th>Cout</th>
                 <td><?php echo $res_all[0]['montant']?></td>
             </tr>
+            <tr class="ligne">
+                <th>Validée</th>
+                <td><?php if($res_all[0]['validee']) echo 'yes'; else echo 'no'; ?></td>
+            </tr>
         </table>
     </fieldset>
     <br><br>
@@ -92,6 +98,17 @@ try {
         ?>
 
     </fieldset>
+    <br><br>
+    <div>
+        <form action="valider.php" method="post">
+            <input name="idcmd" value = <?php echo $idcmd ?> type="hidden" >
+            <button id="Valider" type="submit" style="margin-left:40%;margin-right:auto">Valider</button>
+        </form>
+        <form action="supprimer.php" method="post">
+            <input name="idcmd" value = <?php echo $idcmd ?> type="hidden" >
+            <button id="Supprimer" type="submit" style="margin-left:40%;margin-right:auto">Supprimer</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>
