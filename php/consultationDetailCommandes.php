@@ -30,15 +30,7 @@ try {
                                         GROUP BY  `commandes`.idcmd ");
 
     $res_all = $res->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($res_all as $row) {
-        $commandes[$i]['idcmd'] = $row['idcmd'];
-        $commandes[$i]['nom'] = $row['nom'];
-        $commandes[$i]['prenom'] = $row['prenom'];
-        $commandes[$i]['montant'] = $row['montant'];
-        $commandes[$i]['nb_livre'] = $row['nb_livre'];
-        $commandes[$i]['adresse'] = $row['adresse'];
-        $i++;
-    }
+
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
@@ -51,27 +43,27 @@ try {
         <table>
             <tr class="ligne">
                 <th>Numéro de la commande</th>
-                <td><?php echo $commandes[0]['idcmd']?></td>
+                <td><?php echo $res_all[0]['idcmd']?></td>
             </tr>
             <tr class="ligne">
                 <th>Prénom</th>
-                <td>Tristan</td>
+                <td><?php echo $res_all[0]['prenom']?></td>
             </tr>
             <tr class="ligne">
                 <th>Nom</th>
-                <td>Duhesme</td>
+                <td><?php echo $res_all[0]['nom']?></td>
             </tr>
             <tr class="ligne">
                 <th>Adresse</th>
-                <td>84 boulevard de la Reine</td>
+                <td><?php echo $res_all[0]['adresse']?></td>
             </tr>
             <tr class="ligne">
                 <th>Nombre de livres</th>
-                <td>11</td>
+                <td><?php echo $res_all[0]['nb_livre']?></td>
             </tr>
             <tr class="ligne">
                 <th>Cout</th>
-                <td>134,78</td>
+                <td><?php echo $res_all[0]['montant']?></td>
             </tr>
         </table>
     </fieldset>

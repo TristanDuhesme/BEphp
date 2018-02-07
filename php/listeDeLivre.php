@@ -35,7 +35,7 @@
     </h2>
     <div class="otherLinks">
         <a href="../html/ajouterUnLivre.html">Ajouter un ouvrage</a><br>
-        <a href="../html/consultationListeCommandes.html">Consulter des commandes</a>
+        <a href="consultationListeCommandes.php">Consulter des commandes</a>
     </div>
         <?php
         echo "<table>";
