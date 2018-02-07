@@ -27,18 +27,20 @@ try {
                                         INNER JOIN `lignescmd` ON `commandes`.idcmd = `lignescmd`.`idcmd` 
                                         INNER JOIN `ouvrages` ON `ouvrages`.`idouvrage` = `lignescmd`.`idouvrage` 
                                         INNER JOIN `personnes` ON `commandes`.`idpersonne` = `personnes`.`idpersonne` 
-                                        GROUP BY  `commandes`.idcmd ");
+                                        WHERE `commandes`.idcmd ='".$idcmd.
+                                        "' GROUP BY  `commandes`.idcmd");
 
+    $listeLivre = $dbh->query("
+                                        SELECT `ouvrages`.`titre`, `ouvrages`.`auteur`,
+                                        prix, qte  FROM `commandes` 
+                                        INNER JOIN `lignescmd` ON `commandes`.idcmd = `lignescmd`.`idcmd` 
+                                        INNER JOIN `ouvrages` ON `ouvrages`.`idouvrage` = `lignescmd`.`idouvrage` 
+                                        INNER JOIN `personnes` ON `commandes`.`idpersonne` = `personnes`.`idpersonne` 
+                                        WHERE `commandes`.idcmd ='".$idcmd.
+                                        "' GROUP BY  `commandes`.idcmd, `ouvrages`.idouvrage");
     $res_all = $res->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($res_all as $row) {
-        $commandes[$i]['idcmd'] = $row['idcmd'];
-        $commandes[$i]['nom'] = $row['nom'];
-        $commandes[$i]['prenom'] = $row['prenom'];
-        $commandes[$i]['montant'] = $row['montant'];
-        $commandes[$i]['nb_livre'] = $row['nb_livre'];
-        $commandes[$i]['adresse'] = $row['adresse'];
-        $i++;
-    }
+    $listeLivre_all = $listeLivre->fetchAll(PDO::FETCH_ASSOC);
+
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
@@ -51,56 +53,44 @@ try {
         <table>
             <tr class="ligne">
                 <th>Numéro de la commande</th>
-                <td><?php echo $commandes[0]['idcmd']?></td>
+                <td><?php echo $res_all[0]['idcmd']?></td>
             </tr>
             <tr class="ligne">
                 <th>Prénom</th>
-                <td>Tristan</td>
+                <td><?php echo $res_all[0]['prenom']?></td>
             </tr>
             <tr class="ligne">
                 <th>Nom</th>
-                <td>Duhesme</td>
+                <td><?php echo $res_all[0]['nom']?></td>
             </tr>
             <tr class="ligne">
                 <th>Adresse</th>
-                <td>84 boulevard de la Reine</td>
+                <td><?php echo $res_all[0]['adresse']?></td>
             </tr>
             <tr class="ligne">
                 <th>Nombre de livres</th>
-                <td>11</td>
+                <td><?php echo $res_all[0]['nb_livre']?></td>
             </tr>
             <tr class="ligne">
                 <th>Cout</th>
-                <td>134,78</td>
+                <td><?php echo $res_all[0]['montant']?></td>
             </tr>
         </table>
     </fieldset>
     <br><br>
     <fieldset>
         <legend>Contenu de la commande</legend>
-        <table>
-            <tr>
-                <th>Titre</th>
-                <th>Auteur</th>
-                <th>Editeur</th>
-                <th>Prix (€ HT)</th>
-                <th class="quantiteLivre">Quantité</th>
-            </tr>
-            <tr class="ligne">
-                <td>Cyrano de Bergerac</td>
-                <td>Edmond Rostand</td>
-                <td>gallimard</td>
-                <td>9,99</td>
-                <td class="quantiteLivre">2</td>
-            </tr>
-            <tr class="ligne">
-                <td>L'art de la Guerre</td>
-                <td>Sun Tzu</td>
-                <td>Seuil</td>
-                <td>15,78</td>
-                <td class="quantiteLivre">9</td>
-            </tr>
-        </table>
+
+        <?php
+        echo "<table>";
+        echo "<tr><th>Titre</th><th>Auteur</th><th>Prix (€ HT)</th><th>Quantité</th></tr>";
+        foreach ($listeLivre_all as $value) {
+            echo "<tr class='ligne'><td>" . $value['titre'] . "</td><td>" .$value['auteur']. "</td><td>" . $value['prix'] . "</td><td>" . $value['qte']
+                . "</td></tr>";
+        }
+        echo "</table>";
+        ?>
+
     </fieldset>
 </div>
 </body>
