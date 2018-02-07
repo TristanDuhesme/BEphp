@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749ffb81-cea0-4974-81bf-bd499f010822" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/html/consultationDetailCommandes.html" afterPath="$PROJECT_DIR$/php/consultationDetailCommandes.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/html/consultationListeCommandes.html" afterPath="$PROJECT_DIR$/php/consultationListeCommandes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/listeDeLivre.php" afterPath="$PROJECT_DIR$/php/listeDeLivre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/consultationDetailCommandes.php" afterPath="$PROJECT_DIR$/php/consultationDetailCommandes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +17,23 @@
       <file leaf-file-name="commande.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/commande.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
+            <state relative-caret-position="540">
               <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <marker date="1517972289677" expanded="true" signature="543:652" ph="INSERT INTO `commandes`... " />
                 <marker date="1517972289677" expanded="true" signature="720:801" ph="INSERT INTO `personnes`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="commandeDeLivre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/commandeDeLivre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="46" column="10" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
+              <folding>
+                <marker date="1517996503578" expanded="true" signature="774:798" ph="SELECT * FRO... ouvrages" />
               </folding>
             </state>
           </provider>
@@ -48,10 +56,21 @@
       <file leaf-file-name="consultationDetailCommandes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/consultationDetailCommandes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <marker date="1518000470431" expanded="true" signature="466:1065" ph="SELECT `comm... commandes" />
+                <marker date="1518001393018" expanded="true" signature="466:1065" ph="SELECT `comm... commandes" />
+                <marker date="1518001393018" expanded="true" signature="466:1073" ph="SELECT `comm... commandes" />
+                <marker date="1518001393018" expanded="true" signature="466:1144" ph="SELECT `comm... commandes" />
+                <marker date="1518001393018" expanded="true" signature="466:1146" ph="SELECT `comm... commandes" />
+                <marker date="1518001393018" expanded="true" signature="1221:1719" ph="SELECT `ouvr... commandes" />
+                <marker date="1518001393018" expanded="true" signature="1221:1745" ph="SELECT `ouvr... commandes" />
+                <marker date="1518001393018" expanded="true" signature="1221:1847" ph="SELECT `ouvr... commandes" />
+                <marker date="1518001393018" expanded="true" signature="1221:1898" ph="SELECT `ouvr... commandes" />
+                <marker date="1518001393018" expanded="true" signature="2063:2072" ph="..." />
+                <marker date="1518001393018" expanded="true" signature="2172:2264" ph="..." />
+                <marker date="1518001393018" expanded="true" signature="2241:2264" ph="..." />
+                <marker date="1518001393018" expanded="true" signature="3169:3627" ph="..." />
               </folding>
             </state>
           </provider>
@@ -746,12 +765,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517951004597</updated>
       <workItem from="1517951006277" duration="29000" />
-      <workItem from="1517951057861" duration="22288000" />
+      <workItem from="1517951057861" duration="23207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22317000" />
+    <option name="totallyTimeSpent" value="23236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="23" width="1280" height="731" extended-state="0" />
@@ -894,30 +913,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/ajouterUnLivre.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/connexion.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/commande.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <marker date="1517972289677" expanded="true" signature="543:652" ph="INSERT INTO `commandes`... " />
-            <marker date="1517972289677" expanded="true" signature="720:801" ph="INSERT INTO `personnes`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,13 +943,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/commandeDeLivre.php">
+    <entry file="file://$PROJECT_DIR$/html/ajouterUnLivre.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <marker date="1517996503578" expanded="true" signature="774:798" ph="SELECT * FRO... ouvrages" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="51" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -965,12 +963,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/commande.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <marker date="1517972289677" expanded="true" signature="543:652" ph="INSERT INTO `commandes`... " />
+            <marker date="1517972289677" expanded="true" signature="720:801" ph="INSERT INTO `personnes`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/commandeDeLivre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="46" column="10" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <marker date="1517996503578" expanded="true" signature="774:798" ph="SELECT * FRO... ouvrages" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/consultationDetailCommandes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="440">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
-            <marker date="1518000470431" expanded="true" signature="466:1065" ph="SELECT `comm... commandes" />
+            <marker date="1518001393018" expanded="true" signature="466:1065" ph="SELECT `comm... commandes" />
+            <marker date="1518001393018" expanded="true" signature="466:1073" ph="SELECT `comm... commandes" />
+            <marker date="1518001393018" expanded="true" signature="466:1144" ph="SELECT `comm... commandes" />
+            <marker date="1518001393018" expanded="true" signature="466:1146" ph="SELECT `comm... commandes" />
+            <marker date="1518001393018" expanded="true" signature="1221:1719" ph="SELECT `ouvr... commandes" />
+            <marker date="1518001393018" expanded="true" signature="1221:1745" ph="SELECT `ouvr... commandes" />
+            <marker date="1518001393018" expanded="true" signature="1221:1847" ph="SELECT `ouvr... commandes" />
+            <marker date="1518001393018" expanded="true" signature="1221:1898" ph="SELECT `ouvr... commandes" />
+            <marker date="1518001393018" expanded="true" signature="2063:2072" ph="..." />
+            <marker date="1518001393018" expanded="true" signature="2172:2264" ph="..." />
+            <marker date="1518001393018" expanded="true" signature="2241:2264" ph="..." />
+            <marker date="1518001393018" expanded="true" signature="3169:3627" ph="..." />
           </folding>
         </state>
       </provider>
