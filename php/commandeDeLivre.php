@@ -11,46 +11,41 @@
     <h1>Commander des livres</h1>
     <h2>
         <?php
-session_start();
-if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-    echo "Vous êtes connecté en tant que : ".$_SESSION["username"];
-} else {
-    $_SESSION["logged"] = false;
-    die("Vous n'avez pas le droit de consulter cette page!");
-}
-?>
+        session_start();
+        if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
+            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"];
+        } else {
+            $_SESSION["logged"] = false;
+            die("Vous n'avez pas le droit de consulter cette page!");
+        }
+        require('connectDB.php');
+        $books = array();
+        $i = 0;
+        $res = $dbh->query("SELECT * FROM `ouvrages`");
+
+        $res_all = $res->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($res_all as $row) {
+            $books[$i]['idouvrage'] = $row['idouvrage'];
+            $books[$i]['titre'] = $row['titre'];
+            $books[$i]['auteur'] = $row['auteur'];
+            $books[$i]['prix'] = $row['prix'];
+            $i++;
+        }
+        ?>
     </h2>
-    <form method="post">
-        <table>
-            <tr>
-                <th>Titre</th>
-                <th>Auteur</th>
-                <th>Editeur</th>
-                <th>Prix (€ HT)</th>
-                <th class="quantiteLivre">Quantité</th>
-            </tr>
-            <tr class="ligne">
-                <td>Cyrano de Bergerac</td>
-                <td>Edmond Rostand</td>
-                <td>gallimard</td>
-                <td>9,99</td>
-                <td class="quantiteLivre"><input name="cyrano" type="number" value="0" min="0"></input></td>
-            </tr>
-            <tr class="ligne">
-                <td>Le Malade Imaginaire</td>
-                <td>Molière</td>
-                <td>Hachette</td>
-                <td>6,87</td>
-                <td class="quantiteLivre"><input name="malade" type="number" value="0" min="0"></input></td>
-            </tr>
-            <tr class="ligne">
-                <td>L'art de la Guerre</td>
-                <td>Sun Tzu</td>
-                <td>Seuil</td>
-                <td>15,78</td>
-                <td class="quantiteLivre"><input name="guerre" type="number" value="0" min="0"></input></td>
-            </tr>
-        </table>
+    <form action="commande.php" method="post">
+        <?php
+        echo "<table>";
+        echo "<tr><td><b>ID</b></td><td><b>Titre</b></td>><td><b>Auteur</b></td><td><b>Prix (€ HT)</b></td><td><b>Quantité</b></td></tr>";
+        foreach ($books as $value) {
+            echo "<tr><td>" . $value['idouvrage'] . "</td><td>" .$value['titre']. "</td><td>" . $value['auteur'] . "</td><td>" . $value['prix']
+                . "<input name=\"idouvrage[]\" value =".$value['idouvrage'] ." type=\"hidden\" >"
+                . "<td class=\"quantiteLivre[]\"><input name=\"quantiteLivre[]\" type=\"number\" value=\"0\" min=\"0\" ></td>"
+                . "</td></tr>";
+        }
+        echo "</table>";
+
+        ?>
         <button id="submit" type="submit">Passer commande</button>
     </form>
 </div>
