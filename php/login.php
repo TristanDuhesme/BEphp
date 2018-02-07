@@ -1,7 +1,7 @@
 <?php
 
 require('connectDB.php');
-
+session_start();
 //checking if data has been entered
 if( isset( $_POST['logType'] ) && !empty( $_POST['logType'] ) &&
     isset( $_POST['nom'] ) && !empty( $_POST['nom'] ) &&
@@ -43,6 +43,7 @@ if ($rows){
     $_SESSION["logged"] = false;
 }
 
-$insert = null;
+
+$passworkcheck = null;
 $dbh = null;
 ?>

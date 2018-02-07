@@ -9,14 +9,15 @@
 <body>
 <div id="signup" class="centreOmbre petitFormulaire">
 	<h1>Connexion à votre compte</h1>
+	<p>ou <a href='../html/creationCompteClient.html'>inscription</a></p>
 	<form action="../php/login.php" method="post">
 	<label>Vous êtes ...</label><br>
 	<select name="logType">
 	  <option value="libraire">Libraire</option>
 	  <option value="client">Client</option>
-	</select> <br>
-	<label>Nom</label><input name="nom"/><br>
-	<label>Mot de passe</label><input name="motdepasse" type="password"/>
+	</select> <br/>
+	<label>Nom</label><br/><input name="nom"/><br>
+	<label>Mot de passe</label><br/><input name="motdepasse" type="password"/>
 	<button id="submit" type="submit">Connexion</button>
 	</form>
 </div>

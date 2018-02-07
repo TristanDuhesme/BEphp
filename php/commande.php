@@ -17,7 +17,12 @@ if( isset( $_POST['idouvrage']) && isset($_POST['quantiteLivre']) && $_SESSION["
 } else {
     exit();
 }
-
+if(array_sum($quantiteLivre_list)>0) 
+{
+$_SESSION["commandeVide"] = false;
+} else {
+$_SESSION["commandeVide"] = true;
+}
 $insert_cmd = $dbh->query( "INSERT INTO `commandes` (`idcmd`,`idpersonne`,`date`,`validee` ) VALUES ( '', '$idpersonne', 'GETDATE()','0')" );
 $commandid  = $dbh->lastInsertId();
 
@@ -34,8 +39,8 @@ for ($i = 0; $i < $post_count; $i++) {
     }
 }
 
-
-
+header("Location: commandeDeLivre.php");
+$_SESSION["commandeOk"] = true;
 $insert_cmd = null;
 $insert = null;
 $dbh = null;

@@ -1,6 +1,6 @@
 <?php
 require('connectDB.php');
-
+session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -20,9 +20,22 @@ error_reporting(E_ALL);
     }
 
     $insert = $dbh->query( "INSERT INTO `personnes` (`idpersonne`,`nom`,`prenom`,`adresse`,`password`,`libraire` ) VALUES ( '','$nom', '$prenom', '$addresse', '$motdepasse','0' )" );
+    $idpersonne  = $dbh->lastInsertId();
     //closing mysqli connection
-	$insert = null;    
+
+
+
+
+	
+
+if($insert){
+header("Location: commandeDeLivre.php");
+$_SESSION["signupOK"] = true;
+$_SESSION["logged"] = true;
+$_SESSION["username"] = $nom;
+$_SESSION["idpersonne"] = $idpersonne;
+}
+
+$insert = null;    
 	$dbh = null;
-
-
 ?>
