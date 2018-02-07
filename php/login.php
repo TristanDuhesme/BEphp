@@ -34,7 +34,7 @@ if ($rows){
         $_SESSION["logged"] = true;
     }
     //header("location: test.php");
-    if(logType)
+    if(logType == 1)
         header("Location: listeDeLivre.php");
     else
         header("Location: commandeDeLivre.php");
