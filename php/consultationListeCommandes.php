@@ -13,12 +13,11 @@
         <?php
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"]
-                ."<a href='logout.php'>Click here to log out</a>";
+            echo "Bonjour " . $_SESSION["username"]."(ID:".$_SESSION["idpersonne"].")<br/><a href='logout.php'>Déconnexion</a>";
 
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!"."<a href=\"../html/connexion.html\">-> Login</a>");
+            die("Vous n'avez pas le droit de consulter cette page! <br/><a href=\"../html/connexion.html\">Connexion</a>");
         }
 
         require('connectDB.php');
@@ -43,6 +42,13 @@
         }
         ?>
     </h2>
+    <div class="otherLinks">
+        <a href="listeDeLivre.php">Liste des livres</a><br>
+        <a href="../html/ajouterUnLivre.html">Ajouter un ouvrage</a><br>
+        <a href="consultationListeCommandes.php">Consulter des commandes</a><br>
+        <a href="consultationListeComptes.php">Consulter la liste de client</a><br/><br/>
+
+    </div>
     <div>
         <?php
         echo "<table>";
@@ -51,7 +57,7 @@
             echo "<form action=\"consultationDetailCommandes.php\" method='post'>";
             echo "<tr><td>" . $value['idcmd'] . "</td><td>" .$value['nom']. "</td><td>" . $value['prenom'] . "</td><td>" . $value['montant']. "</td><td>" .$value['nb_livre']
                 . "<input name=\"idcmd\" value =".$value['idcmd'] ." type=\"hidden\" >"
-                ."</td><td><button id=\"submit\"".$value['idcmd']."type=\"submit\">Voir le détail</button>"
+                ."</td><td><button id=\"submit2\"".$value['idcmd']."type=\"submit\">Voir le détail</button>"
                 . "</td></tr>";
             echo "</form>";
 

@@ -13,12 +13,15 @@ div.centreOmbre {
 }
 
 .centreOmbre h2 {
-	text-align: right;
-	margin-right: 130px;
+	text-align: center;
+}
+
+h2.red {
+	color: red;
 }
 
 div.petitFormulaire {
-	width: 180px;
+	width: 250px;
 }
 
 div.grandTableau {
@@ -26,7 +29,13 @@ div.grandTableau {
 }
 
 #submit {
-	display: block;
+	display: inline-block;
+	width: 45%;	
+	margin: auto;
+	margin-top: 5px;
+}
+#submit2 {
+	display: block;	
 	margin: auto;
 	margin-top: 5px;
 }

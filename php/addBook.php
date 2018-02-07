@@ -14,6 +14,7 @@ if( isset( $_POST['titre'] ) && !empty( $_POST['titre'] ) &&
     $prix = $_POST['prix'];
 
 } else {
+    header("Location: ../html/ajouterUnLivre.html");
     exit();
 }
 

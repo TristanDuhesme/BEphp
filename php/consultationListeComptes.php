@@ -14,10 +14,11 @@
         <?php
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"];
+            echo "Bonjour " . $_SESSION["username"]."(ID:".$_SESSION["idpersonne"].")<br/><a href='logout.php'>Déconnexion</a>";
+
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!"."<a href=\"../html/connexion.html\">-> Login</a>");
+            die("Vous n'avez pas le droit de consulter cette page! <br/><a href=\"../html/connexion.html\">Connexion</a>");
         }
         require('connectDB.php');
         $clients = array();
@@ -33,6 +34,13 @@
         }
         ?>
     </h2>
+    <div class="otherLinks">
+        <a href="listeDeLivre.php">Liste des livres</a><br>
+        <a href="../html/ajouterUnLivre.html">Ajouter un ouvrage</a><br>
+        <a href="consultationListeCommandes.php">Consulter des commandes</a><br>
+        <a href="consultationListeComptes.php">Consulter la liste de client</a><br/><br/>
+
+    </div>
 
 
 

@@ -10,10 +10,11 @@
 <div id="addbook" class="centreOmbre petitFormulaire">
     <h1>Ajouter un livre</h1>
     <form action="../php/addBook.php" method="post">
-        <label>Titre</label><input name="titre"/><br>
-        <label>Auteur</label><input name="auteur"/><br>
-        <label>Prix</label><input name="prix"/><br>
+        <label>Titre</label><br/><input name="titre"/><br/>
+        <label>Auteur</label><br/><input name="auteur"/><br/>
+        <label>Prix</label><br/><input name="prix"/><br/>
         <button id="submit" type="submit">Ajouter</button>
+        <input type="button" value="Annuler" onclick="location.href='../php/listeDeLivre.php'" />
     </form>
 </div>
 </body>

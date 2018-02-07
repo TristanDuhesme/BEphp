@@ -50,6 +50,12 @@ try {
 <body>
 <div id="detailCommande" class="centreOmbre grandTableau">
     <h1>Détail de la commande</h1>
+    <div class="otherLinks">
+        <a href="listeDeLivre.php">Liste des livres</a><br>
+        <a href="../html/ajouterUnLivre.html">Ajouter un ouvrage</a><br>
+        <a href="consultationListeCommandes.php">Consulter des commandes</a><br>
+        <a href="consultationListeComptes.php">Consulter la liste de client</a><br/><br/>
+    </div>
     <fieldset>
         <legend>Propriétaire de la commande</legend>
         <table>
