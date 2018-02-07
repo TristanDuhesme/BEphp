@@ -23,4 +23,6 @@ error_reporting(E_ALL);
     //closing mysqli connection
 	$insert = null;    
 	$dbh = null;
+
+
 ?>
