@@ -13,10 +13,12 @@
         <?php
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"];
+            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"]
+                ."<a href='logout.php'>Click here to log out</a>";
+
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!");
+            die("Vous n'avez pas le droit de consulter cette page!"."<a href=\"../html/connexion.html\">-> Login</a>");
         }
         require('connectDB.php');
         $books = array();
@@ -35,7 +37,9 @@
     </h2>
     <div class="otherLinks">
         <a href="../html/ajouterUnLivre.html">Ajouter un ouvrage</a><br>
-        <a href="consultationListeCommandes.php">Consulter des commandes</a>
+        <a href="consultationListeCommandes.php">Consulter des commandes</a><br>
+        <a href="consultationListeComptes.php">Consulter la liste de client</a><br>
+
     </div>
         <?php
         echo "<table>";

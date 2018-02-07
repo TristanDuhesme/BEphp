@@ -13,11 +13,14 @@
         <?php
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"];
+            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"]
+                ."<a href='logout.php'>Click here to log out</a>";
+
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!");
+            die("Vous n'avez pas le droit de consulter cette page!"."<a href=\"../html/connexion.html\">-> Login</a>");
         }
+
         require('connectDB.php');
         $commandes = array();
         $i = 0;
