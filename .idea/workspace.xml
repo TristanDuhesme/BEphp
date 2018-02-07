@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="749ffb81-cea0-4974-81bf-bd499f010822" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/html/connexion.html" afterPath="$PROJECT_DIR$/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/creationCompteClient.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/info.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/creationCompteClient.html" afterPath="$PROJECT_DIR$/html/creationCompteClient.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/commandeDeLivre.php" afterPath="$PROJECT_DIR$/php/commandeDeLivre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/connectDB.php" afterPath="$PROJECT_DIR$/php/connectDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/consultationListeCommandes.php" afterPath="$PROJECT_DIR$/php/consultationListeCommandes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/consultationListeComptes.php" afterPath="$PROJECT_DIR$/php/consultationListeComptes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/listeDeLivre.php" afterPath="$PROJECT_DIR$/php/listeDeLivre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/login.php" afterPath="$PROJECT_DIR$/php/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/logout.php" afterPath="$PROJECT_DIR$/php/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/supprimer.php" afterPath="$PROJECT_DIR$/php/supprimer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +25,7 @@
             <state relative-caret-position="330">
               <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <marker date="1518021128915" expanded="true" signature="1398:1422" ph="SELECT * FRO... ouvrages" />
+                <marker date="1518021353638" expanded="true" signature="1364:1388" ph="SELECT * FRO... ouvrages" />
               </folding>
             </state>
           </provider>
@@ -115,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/html/creationCompteClient.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="24" />
+              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -146,7 +141,7 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
@@ -298,6 +293,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/php" />
     </key>
   </component>
@@ -787,16 +783,15 @@
       <workItem from="1517951006277" duration="29000" />
       <workItem from="1517951057861" duration="26172000" />
       <workItem from="1518007559749" duration="544000" />
-      <workItem from="1518008623448" duration="995000" />
+      <workItem from="1518008623448" duration="1140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27740000" />
+    <option name="totallyTimeSpent" value="27885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="731" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -812,7 +807,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -844,7 +839,7 @@
         <state relative-caret-position="615">
           <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <marker date="1518021128915" expanded="true" signature="1398:1422" ph="SELECT * FRO... ouvrages" />
+            <marker date="1518021353638" expanded="true" signature="1364:1388" ph="SELECT * FRO... ouvrages" />
           </folding>
         </state>
       </provider>
@@ -917,7 +912,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -972,7 +967,7 @@
         <state relative-caret-position="615">
           <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <marker date="1518021128915" expanded="true" signature="1398:1422" ph="SELECT * FRO... ouvrages" />
+            <marker date="1518021353638" expanded="true" signature="1364:1388" ph="SELECT * FRO... ouvrages" />
           </folding>
         </state>
       </provider>
@@ -1065,7 +1060,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518021128915" expanded="true" signature="1398:1422" ph="SELECT * FRO... ouvrages" />
+            <marker date="1518021353638" expanded="true" signature="1364:1388" ph="SELECT * FRO... ouvrages" />
           </folding>
         </state>
       </provider>
@@ -1225,12 +1220,12 @@
     <entry file="file://$PROJECT_DIR$/html/creationCompteClient.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="24" />
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
@@ -1251,7 +1246,7 @@
         <state relative-caret-position="330">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <marker date="1518021128915" expanded="true" signature="1398:1422" ph="SELECT * FRO... ouvrages" />
+            <marker date="1518021353638" expanded="true" signature="1364:1388" ph="SELECT * FRO... ouvrages" />
           </folding>
         </state>
       </provider>

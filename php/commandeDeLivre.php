@@ -23,7 +23,7 @@
 		}
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!"."<br/><a href=\"../html/index.html\">Connexion</a>");
+            die("Vous n'avez pas le droit de consulter cette page!". ">Connexion</a>");
         }
         require('connectDB.php');
         $books = array();
