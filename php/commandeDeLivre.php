@@ -14,16 +14,16 @@
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
             echo "Bonjour " . $_SESSION["username"]."( ID:".$_SESSION["idpersonne"].")<br/><a href='logout.php'>Déconnexion</a>";;
-	    if($_SESSION["commandeOk"] === true && $_SESSION["commandeVide"] === false){
+	    if(isset($_SESSION["commandeOk"]) && isset($_SESSION["commandeVide"]) && $_SESSION["commandeOk"] === true && $_SESSION["commandeVide"] === false){
 		echo "</h2><h2 class='red'><br>La commande est bien prise en compte!";
 		$_SESSION["commandeOk"] = false;
-		} else if($_SESSION["commandeOk"] === true && $_SESSION["commandeVide"] === true){
+		} else if(isset($_SESSION["commandeOk"]) && isset($_SESSION["commandeVide"]) && $_SESSION["commandeOk"] === true && $_SESSION["commandeVide"] === true){
 		echo "</h2><h2 class='red'><br>Vous ne pouvez pas commander 0 livre, soyez plus ambitieux !";
 		$_SESSION["commandeOk"] = false; 
 		}
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page!"."<br/><a href=\"../html/connexion.html\">Connexion</a>");
+            die("Vous n'avez pas le droit de consulter cette page!"."<br/><a href=\"../html/index.html\">Connexion</a>");
         }
         require('connectDB.php');
         $books = array();

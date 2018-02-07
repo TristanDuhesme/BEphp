@@ -11,7 +11,7 @@
         <?php
 		session_start();
 		session_destroy();
-		echo 'Vous avez bien été déconnecté. <br/><a href="../html/connexion.html">Se reconnecter</a>';
+		echo 'Vous avez bien été déconnecté. <br/><a href="../html/index.html">Se reconnecter</a>';
         ?>
     </h2>
 </div>

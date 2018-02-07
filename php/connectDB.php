@@ -1,7 +1,7 @@
 <?php
 $sql_server = 'localhost';
-$sql_user = 'bdlibrairie';
-$sql_pwd = 'bdlibrairie';
+$sql_user = 'root';
+$sql_pwd = '';
 $sql_db = 'bdlibrairie';
 
 try {

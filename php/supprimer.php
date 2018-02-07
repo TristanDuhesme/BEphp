@@ -15,7 +15,6 @@ try {
     $delete_lignescmd = $dbh->query( "DELETE FROM `lignescmd` WHERE idcmd = ".$idcmd);
     $delete_commandes = $dbh->query( "DELETE FROM `commandes` WHERE idcmd = ".$idcmd);
 
-
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
