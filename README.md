@@ -1,5 +1,5 @@
 # BEphp
 
-By Tristan DUHESME, Yanchi LU et Chengxian LIN
+Tristan DUHESME, Yanchi LU et Chengxian LIN
 
 
