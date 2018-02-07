@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Ajouter un livre</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="addbook" class="centreOmbre petitFormulaire">
+    <h1>Ajouter un livre</h1>
+    <form action="../php/addBook.php" method="post">
+        <label>Titre</label><input name="titre"/><br>
+        <label>Auteur</label><input name="auteur"/><br>
+        <label>Prix</label><input name="prix"/><br>
+        <button id="submit" type="submit">Ajouter</button>
+    </form>
+</div>
+</body>
+</html>
