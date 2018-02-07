@@ -12,6 +12,11 @@ div.centreOmbre {
 	margin-top: 0px;
 }
 
+.centreOmbre h2 {
+	text-align: right;
+	margin-right: 130px;
+}
+
 div.petitFormulaire {
 	width: 180px;
 }
