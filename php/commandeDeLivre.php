@@ -13,7 +13,7 @@
         <?php
         session_start();
         if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
-            echo "Vous êtes connecté en tant que : " . $_SESSION["username"];
+            echo "Vous êtes connecté en tant que : " . $_SESSION["username"].", ID:".$_SESSION["idpersonne"];
         } else {
             $_SESSION["logged"] = false;
             die("Vous n'avez pas le droit de consulter cette page!");
@@ -34,13 +34,13 @@
         ?>
     </h2>
     <form action="commande.php" method="post">
-
         <?php
         echo "<table>";
-        echo "<tr><td><b>Titre</b><td><b>Auteur</b></td><td><b>Prix (€ HT)</b></td><td><b>Quantité</b></td></tr>";
+        echo "<tr><td><b>ID</b></td><td><b>Titre</b></td>><td><b>Auteur</b></td><td><b>Prix (€ HT)</b></td><td><b>Quantité</b></td></tr>";
         foreach ($books as $value) {
-            echo "<tr><td>" . $value['titre'] . "</td><td>" . $value['auteur'] . "</td><td>" . $value['prix']
-                . "<td class=\"quantiteLivre\"><input name=".$value['idouvrage']." type=\"number\" value=\"0\" min=\"0\"></input></td>"
+            echo "<tr><td>" . $value['idouvrage'] . "</td><td>" .$value['titre']. "</td><td>" . $value['auteur'] . "</td><td>" . $value['prix']
+                . "<input name=\"idouvrage[]\" value =".$value['idouvrage'] ." type=\"hidden\" >"
+                . "<td class=\"quantiteLivre[]\"><input name=\"quantiteLivre[]\" type=\"number\" value=\"0\" min=\"0\" ></td>"
                 . "</td></tr>";
         }
         echo "</table>";

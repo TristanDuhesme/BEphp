@@ -21,15 +21,19 @@ if( isset( $_POST['logType'] ) && !empty( $_POST['logType'] ) &&
 
 try {
     $passworkcheck = $dbh->query( "SELECT * FROM `personnes` WHERE nom = '".$nom."' AND password ='".$motdepasse."' AND libraire = ".$logType );
-    $rows = $passworkcheck->fetchAll(PDO::FETCH_COLUMN, 1);
+    $rows = $passworkcheck->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
 
 if ($rows){
+
     session_start();
-    $_SESSION["username"] = $nom;
-    $_SESSION["logged"] = true;
+    foreach ($rows as $row){
+        $_SESSION["username"] = $nom;
+        $_SESSION["idpersonne"] = $row['idpersonne'];
+        $_SESSION["logged"] = true;
+    }
     //header("location: test.php");
     header("Location: commandeDeLivre.php");
 } else{
