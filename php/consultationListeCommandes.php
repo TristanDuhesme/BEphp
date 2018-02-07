@@ -17,7 +17,7 @@
 
         } else {
             $_SESSION["logged"] = false;
-            die("Vous n'avez pas le droit de consulter cette page! <br/><a href=\"../html/connexion.html\">Connexion</a>");
+            die(">Connexion</a>");
         }
 
         require('connectDB.php');

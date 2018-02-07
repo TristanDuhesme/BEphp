@@ -39,7 +39,7 @@ if ($rows){
     else
         header("Location: commandeDeLivre.php");
 } else{
-    header("Location: ../html/connexion.html");
+    header("Location: ../html/index.html");
     $_SESSION["logged"] = false;
 }
 
