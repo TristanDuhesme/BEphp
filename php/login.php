@@ -27,7 +27,6 @@ try {
 }
 
 if ($rows){
-
     session_start();
     foreach ($rows as $row){
         $_SESSION["username"] = $nom;
@@ -35,7 +34,10 @@ if ($rows){
         $_SESSION["logged"] = true;
     }
     //header("location: test.php");
-    header("Location: commandeDeLivre.php");
+    if(logType)
+        header("Location: listeDeLivre.php");
+    else
+        header("Location: commandeDeLivre.php");
 } else{
     header("Location: ../html/connexion.html");
     $_SESSION["logged"] = false;
