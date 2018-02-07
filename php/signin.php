@@ -27,9 +27,14 @@ try {
 }
 
 if ($rows){
-    header("Location: ../html/commandeDeLivre.html");
+    session_start();
+    $_SESSION["username"] = $nom;
+    $_SESSION["logged"] = true;
+    //header("location: test.php");
+    header("Location: commandeDeLivre.php");
 } else{
     header("Location: ../html/connexion.html");
+    $_SESSION["logged"] = false;
 }
 
 $insert = null;

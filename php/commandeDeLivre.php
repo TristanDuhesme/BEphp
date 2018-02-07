@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Commande</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="commandeLivres" class="centreOmbre grandTableau">
+    <h1>Commander des livres</h1>
+    <h2>
+        <?php
+session_start();
+if (isset($_SESSION["username"]) && $_SESSION["logged"] === true) {
+    echo "Vous êtes connecté en tant que : ".$_SESSION["username"];
+} else {
+    $_SESSION["logged"] = false;
+    die("Vous n'avez pas le droit de consulter cette page!");
+}
+?>
+    </h2>
+    <form method="post">
+        <table>
+            <tr>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>Editeur</th>
+                <th>Prix (€ HT)</th>
+                <th class="quantiteLivre">Quantité</th>
+            </tr>
+            <tr class="ligne">
+                <td>Cyrano de Bergerac</td>
+                <td>Edmond Rostand</td>
+                <td>gallimard</td>
+                <td>9,99</td>
+                <td class="quantiteLivre"><input name="cyrano" type="number" value="0" min="0"></input></td>
+            </tr>
+            <tr class="ligne">
+                <td>Le Malade Imaginaire</td>
+                <td>Molière</td>
+                <td>Hachette</td>
+                <td>6,87</td>
+                <td class="quantiteLivre"><input name="malade" type="number" value="0" min="0"></input></td>
+            </tr>
+            <tr class="ligne">
+                <td>L'art de la Guerre</td>
+                <td>Sun Tzu</td>
+                <td>Seuil</td>
+                <td>15,78</td>
+                <td class="quantiteLivre"><input name="guerre" type="number" value="0" min="0"></input></td>
+            </tr>
+        </table>
+        <button id="submit" type="submit">Passer commande</button>
+    </form>
+</div>
+</body>
+</html>
